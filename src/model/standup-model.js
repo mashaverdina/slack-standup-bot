@@ -54,7 +54,8 @@ model.summarize = function() {
       postTitle += ' (' + (index + 1) + ' of ' + summaries.length + ')';
     }
 	console.log('uploading file to channel "' + summaryChannel + '"');
-    return filesUpload({
+    summaryChannel = summaryChannel.split('|')[0]
+	return filesUpload({
       filetype: 'post',
       filename: postTitle,
       title: postTitle,
