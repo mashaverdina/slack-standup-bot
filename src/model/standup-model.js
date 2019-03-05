@@ -53,7 +53,7 @@ model.summarize = function() {
     if (summaries.length > 1) {
       postTitle += ' (' + (index + 1) + ' of ' + summaries.length + ')';
     }
-
+	console.log('uploading file to channel "' + summaryChannel + '"');
     return filesUpload({
       filetype: 'post',
       filename: postTitle,
